@@ -1,0 +1,142 @@
+$cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$dark: hsl(212, 21%, 14%);
+$gray: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+$paragrap: 0.875rem;
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./src/fonts/Montserrat-Regular.ttf') format('ttf'),
+    url('./src/fonts/Montserrat-Regular.woff') format('woff'),
+    url('./src/fonts/Montserrat-Regular.svg') format('svg');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('./src/fonts/Fraunces.ttf') format('ttf'),
+    url('./src/fonts/Fraunces.woff') format('woff'),
+    url('./src/fonts/Fraunces.svg') format('svg');
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: $cream;
+}
+
+.component {
+  padding: 10rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
+
+  &__image {
+    background: url('./src/images/image-product-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.aside {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+
+  &__title {
+    color: $gray;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+  }
+
+  &__header {
+    font-family: 'Fraunces';
+  }
+
+  &__text {
+    color: $gray;
+  }
+
+  &__button {
+    border: none;
+    background-color: $cyan;
+    color: $white;
+    font-family: 'Montserrat';
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem 0 1rem;
+  }
+
+  &__icon {
+    background: url('./src/images/icon-cart.svg');
+    background-repeat: no-repeat;
+    padding-left: 26px;
+  }
+}
+
+.price-section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  &__new-price {
+    color: $cyan;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Fraunces';
+  }
+
+  &__old-price {
+    text-decoration: line-through;
+    color: $gray;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+      background: url('./src/images/image-product-mobile.jpg');
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+    }
+  }
+
+  .aside {
+    row-gap: 1.5rem;
+  }
+
+}

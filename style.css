@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./src/fonts/Montserrat-Regular.ttf") format("ttf"), url("./src/fonts/Montserrat-Regular.woff") format("woff"), url("./src/fonts/Montserrat-Regular.svg") format("svg");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url("./src/fonts/Fraunces.ttf") format("ttf"), url("./src/fonts/Fraunces.woff") format("woff"), url("./src/fonts/Fraunces.svg") format("svg");
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f2ebe3;
+}
+
+.component {
+  padding: 10rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.card__image {
+  background: url("./src/images/image-product-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+}
+
+.aside__title {
+  color: #6c7289;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.aside__header {
+  font-family: 'Fraunces';
+}
+
+.aside__text {
+  color: #6c7289;
+}
+
+.aside__button {
+  border: none;
+  background-color: #3c8067;
+  color: white;
+  font-family: 'Montserrat';
+  width: 100%;
+  border-radius: 5px;
+  padding: 1rem 0 1rem;
+}
+
+.aside__icon {
+  background: url("./src/images/icon-cart.svg");
+  background-repeat: no-repeat;
+  padding-left: 26px;
+}
+
+.price-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price-section__new-price {
+  color: #3c8067;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Fraunces';
+}
+
+.price-section__old-price {
+  text-decoration: line-through;
+  color: #6c7289;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card__image {
+    background: url("./src/images/image-product-mobile.jpg");
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+  }
+  .aside {
+    row-gap: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
